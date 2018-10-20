@@ -1,0 +1,54 @@
+.gridcontainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    'topp topp topp'
+    'm1 m2 m3'
+    'bund bund bund';
+}
+
+.top{
+    grid-area: topp;
+}
+.mellemk1{
+    grid-area: m1;
+}
+.mellemk2{
+    grid-area: m2;
+}
+.mellemk3{
+    grid-area: m3;
+}
+
+.bund{
+    grid-area: bund;
+}
+
+@media only screen and (max-width: 600px){
+  
+    .gridcontainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'topp'
+        'm1'
+        'm3'
+        'm2'
+        'bund';
+    }
+    
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px){
+  
+    .gridcontainer{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        'topp topp'
+        'm1 m2'
+        'm1 m3'
+        'bund bund';
+    }
+    
+}
